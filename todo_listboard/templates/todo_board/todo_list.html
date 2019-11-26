@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% extends 'todo_mainboard/common/header.html' %}
+{% load staticfiles %}
+{% block main %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo_list_html</title>
+</head>
+<body>
+    <div class="col-md-12">
+        <div class="container">
+            <div id="ex1" class="list-group col">
+                {% for list in todo_list %}
+                    <div class="list-group-item" >
+                        <input type="checkbox" name="{{list.title}}" value="{{list.title}}">
+                        {{list.title}} : {{ list.content }}<br>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endblock main %}
+
+</body>
+</html>
