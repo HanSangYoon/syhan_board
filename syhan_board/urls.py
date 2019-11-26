@@ -24,5 +24,5 @@ urlpatterns = [
     path('home/', include('todo_mainboard.urls')),
 
     # listboard app
-    # path('board/', include('todo_listboard.urls')),
+    path('board/', include('todo_listboard.urls')),
 ]
